@@ -2,20 +2,6 @@
 
 ## Project Overview
 This project converts raw video input into gesture-based animations by extracting key frames, recognizing gestures with computer vision, and animating 3D models to produce realistic gesture sequences.
-
-## Key Features
-- Extracts and preprocesses video frames
-- Performs gesture recognition using advanced algorithms
-- Maps gestures to 3D skeleton models for animation
-- Produces smooth, lifelike animations
-- Supports export and real-time visualization
-
-## How It Works
-1. Input video is processed to extract meaningful frames.
-2. Gestures are identified on a frame-by-frame basis.
-3. Gesture data controls 3D model animations.
-4. Animated output can be viewed or exported.
-
 ## Visual Explanation
 
 ### Final Output  
@@ -29,6 +15,20 @@ This project converts raw video input into gesture-based animations by extractin
 
 ### Code for Backend  
 <img width="1391" height="349" alt="Backend Code" src="https://github.com/user-attachments/assets/760ca094-dc16-45e0-8e54-3a35f6d8a40f" />
+## Key Features
+- Extracts and preprocesses video frames
+- Performs gesture recognition using advanced algorithms
+- Maps gestures to 3D skeleton models for animation
+- Produces smooth, lifelike animations
+- Supports export and real-time visualization
+
+## How It Works
+1. Input video is processed to extract meaningful frames.
+2. Gestures are identified on a frame-by-frame basis.
+3. Gesture data controls 3D model animations.
+4. Animated output can be viewed or exported.
+
+
 
 ## Future Work
 - Utilize **Generative AI** to enhance gesture animation realism and diversity.
