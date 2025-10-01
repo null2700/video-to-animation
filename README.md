@@ -5,16 +5,18 @@ This project converts raw video input into gesture-based animations by extractin
 ## Visual Explanation
 
 ### Final Output  
-<img width="1816" height="630" alt="Final Output" src="https://github.com/user-attachments/assets/d93293cc-1c3d-466c-8c06-9d6830825a74" />
-
+<img width="969" height="640" alt="Backend Working" src="https://github.com/user-attachments/assets/ce94d96f-9cc3-4e5a-92d2-6d2ffc1edf36" />
 ### Data Generation  
-<img width="1808" height="631" alt="Data Generation" src="https://github.com/user-attachments/assets/f7ccdf0f-8fbc-4023-930d-7f81f3388671" />
+<img width="1391" height="349" alt="Backend Code" src="https://github.com/user-attachments/assets/760ca094-dc16-45e0-8e54-3a35f6d8a40f" />
 
 ### Backend Working  
-<img width="969" height="640" alt="Backend Working" src="https://github.com/user-attachments/assets/ce94d96f-9cc3-4e5a-92d2-6d2ffc1edf36" />
+<img width="1816" height="630" alt="Final Output" src="https://github.com/user-attachments/assets/d93293cc-1c3d-466c-8c06-9d6830825a74" />
+
 
 ### Code for Backend  
-<img width="1391" height="349" alt="Backend Code" src="https://github.com/user-attachments/assets/760ca094-dc16-45e0-8e54-3a35f6d8a40f" />
+<img width="1808" height="631" alt="Data Generation" src="https://github.com/user-attachments/assets/f7ccdf0f-8fbc-4023-930d-7f81f3388671" />
+
+
 ## Key Features
 - Extracts and preprocesses video frames
 - Performs gesture recognition using advanced algorithms
