@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JnanMudra - ISL App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <h1>JnanMudra</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero">
+            <h2>Empowering Communication Through Sign Language</h2>
+            <p>Your companion to understanding Indian Sign Language.</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>JnanMudra is dedicated to empowering the Indian deaf community by providing accessible and innovative tools for communication using Indian Sign Language (ISL). 
+            Our mission is to bridge the communication gap between the deaf and hearing communities through AI-powered technology, enabling real-time translation from speech to sign language and vice-versa. 
+            We aim to make ISL easily learnable and usable for everyone, creating a more inclusive world where no one is left out of conversations due to hearing disabilities.</p>
+        </div>
+        <div class="about-img">
+            <img src="./Screenshot 2024-09-29 172357.png" alt="signing animation" height="400px" width="600px">
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h1>Features</h1>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Real-time ISL Conversion</h3>
+                    <p>Convert spoken words into Indian Sign Language gestures.</p>
+                </div>
+                <div class="feature">
+                    <h3>Speech to Gesture</h3>
+                    <p>Use our AI-driven technology to interpret and generate gestures.</p>
+                </div>
+                <div class="feature">
+                    <h3>ISL Learning Tools</h3>
+                    <p>Interactive tutorials to help you learn ISL step-by-step.</p>
+                </div>
+                <div class="feature">
+                    <h3>User-Friendly Interface</h3>
+                    <p>Simple, intuitive design for easy navigation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Learn Section (Tutorials and Articles) -->
+    <section id="learn">
+        <div class="container">
+            <h1>Learn ISL</h1>
+            <p>Explore collection of tutorials and articles to master Indian Sign Language.</p>
+
+            <div class="youtube-playlist">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=k4BeBIa_4omr5ziu&amp;list=PLFjydPMg4DaoHAtKlvy4I1aL1ksHY0l28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=E4ddmwwSTUlQBbqc&amp;list=PLFjydPMg4DarukFKKVn9bop7fWDg8TGhG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hO8ptBjnbE9h6i_j&amp;list=PLxYMaKXKMMcMgg4f47WkG7AM0bb3AyjTi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=GA1FQ9DpdZv0-V2t&amp;list=PLxYMaKXKMMcNfbb0sOfg5sGJCWCLyKe_K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <ul class="tutorial-list"></ul>
+                <li><a href="https://indiansignlanguage.org/">Beginner's Guide to Indian Sign Language</a></li>
+                <li><a href="https://www.researchgate.net/figure/Different-Signs-of-Indian-Sign-language_fig1_360403465">Common ISL Gestures and Their Meanings</a></li>
+                <li><a href="https://www.ndcs.org.uk/information-and-support/professionals/activities/resources/communication/">How to Communicate Effectively Using ISL</a></li>
+                <li><a href="https://www.nios.ac.in/media/documents/230-ISL/Indian-Sign-Language-230.pdf">Advanced ISL Grammar and Syntax</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Your Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JnanMudra. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

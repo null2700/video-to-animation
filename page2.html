@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Deaf?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        p {
+            color: #ccc;
+            font-size: 18px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>क्या आप बहरे हैं?</h1>
+    <p>इस प्रश्न का उत्तर देने के लिए कृपया एक बटन दबाएँ:</p>
+    
+    <form method="POST" action="/submit_answer">
+        <button type="submit" name="answer" value="yes">हाँ</button>
+        <button type="submit" name="answer" value="no">नहीं</button>
+    </form>
+
+    <br><br>
+    <a href="/">वापस जाएं</a>
+
+    {% if response %}
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
+	

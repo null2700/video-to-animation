@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Voice Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function sendCommand() {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = 'hi-IN';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onresult = (event) => {
+                const command = event.results[0][0].transcript;
+                if (command) {
+                    document.getElementById("response").innerHTML = "आदेश: " + command + "<br>सुन रहा हूँ...";
+                    fetch('/listen', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ command: command })
+                    }).then(response => response.json()).then(data => {
+                        if (data.status === "success") {
+                            document.getElementById("response").innerHTML = "आदेश: " + command + "<br>प्रतिक्रिया: " + data.response;
+                        } else {
+                            document.getElementById("response").innerHTML = "माफ़ करें, मैं आदेश नहीं समझ सका।";
+                        }
+                    }).catch(err => {
+                        document.getElementById("response").innerHTML = "त्रुटि हुई।";
+                    });
+                } else {
+                    document.getElementById("response").innerHTML = "कोई आदेश नहीं मिला।";
+                }
+            };
+
+            recognition.onerror = () => {
+                document.getElementById("response").innerHTML = "माफ़ करें, आवाज़ पहचानने में त्रुटि हुई।";
+            };
+
+            recognition.start();
+        }
+    </script>
+</head>
+<body>
+    <h1>हिंदी वॉयस चैटबॉट</h1>
+    <button onclick="sendCommand()">माइक से बोलें</button>
+    <p id="response">माइक दबाएं और बात करें</p>
+
+    <a href="/page2">अगले पेज पर जाएं</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Deaf?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        p {
+            color: #ccc;
+            font-size: 18px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>क्या आप बहरे हैं?</h1>
+    <p>इस प्रश्न का उत्तर देने के लिए कृपया एक बटन दबाएँ:</p>
+    
+    <form method="POST" action="/submit_answer">
+        <button type="submit" name="answer" value="yes">हाँ</button>
+        <button type="submit" name="answer" value="no">नहीं</button>
+    </form>
+
+    <br><br>
+    <a href="/">वापस जाएं</a>
+
+    {% if response %}
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
+	
